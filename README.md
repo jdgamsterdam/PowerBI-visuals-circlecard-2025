@@ -1,3 +1,8 @@
+# Updates
+
+If have taken the Circle card example and updated it to use the latest versions of React and the PowerBI visualization modules.  
+This basically gives one of simplest example of a visualization using the formatting pane. 
+
 # Circle Card Custom Visual
 
 ![Circle Card](https://docs.microsoft.com/en-us/power-bi/developer/media/custom-visual-develop-tutorial/circle-developer-visual.png)

@@ -30,7 +30,8 @@ export interface State {
     textValue: string,
     size: number,
     background?: string,
-    borderWidth?: number
+    borderWidth?: number,
+    labelFontSize?: number
 }
 
 export const initialState: State = {

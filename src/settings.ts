@@ -48,8 +48,22 @@ export class CircleSettings extends FormattingSettingsCard {
     slices: FormattingSettingsSlice[] = [this.circleColor, this.circleThickness];
 }
 
+export class LabelSettings extends FormattingSettingsCard {
+
+    public labelFontSize = new formattingSettings.NumUpDown({
+        name: "labelFontSize",
+        displayName: "Label Font Size",
+        value: 10,
+    });
+
+    name: string = "label";
+    displayName: string = "Label";
+    slices: FormattingSettingsSlice[] = [this.labelFontSize];
+}
+
+
 export class Settings extends Model {
     public circle: CircleSettings = new CircleSettings();
-
-    cards: FormattingSettingsCard[] = [this.circle];
+    public label: LabelSettings = new LabelSettings();
+    cards: FormattingSettingsCard[] = [this.circle, this.label];
 }

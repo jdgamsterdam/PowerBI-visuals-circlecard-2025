@@ -29,7 +29,20 @@
                     }
                 }
             }
+        },
+        "label": {
+            "displayName": "Label",
+            "properties": {
+                "labelFontSize": {
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                }
+            }
         }
+
     },
     "dataViewMappings": [
         {

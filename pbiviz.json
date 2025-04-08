@@ -1,19 +1,19 @@
 {
   "visual": {
-    "name": "circlecard",
-    "displayName": "circlecard",
-    "guid": "circlecard4AD8D1E1DA0943AEB18E1E59B92001A9",
+    "name": "reactCircleCard",
+    "displayName": "React Circle Card",
+    "guid": "reactcirclecard4AD8D1E1DA0943AEB18E1E59B92001A9",
     "visualClassName": "Visual",
-    "version": "1.0.0",
-    "description": "",
-    "supportUrl": "",
-    "gitHubUrl": ""
+    "version": "1.0.0.1",
+    "description": "Simple Cicle Card Update for Latest APIs",
+    "supportUrl":"https://github.com/jdgamsterdam/PowerBI-visuals-circlecard-2025/blob/master/README.md",
+    "gitHubUrl":"https://github.com/jdgamsterdam/PowerBI-visuals-circlecard-2025/"  
   },
-  "apiVersion": "2.6.0",
-  "author": {
-    "name": "",
-    "email": ""
-  },
+  "apiVersion": "5.11.0",
+  "author":{
+    "name":"Jon Goldberg",
+    "email":"jdgamsterdam@gmail.com"
+},
   "assets": {
     "icon": "assets/icon.png"
   },

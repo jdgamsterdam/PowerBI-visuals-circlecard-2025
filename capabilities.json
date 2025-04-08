@@ -27,22 +27,16 @@
                     "type": {
                         "numeric": true
                     }
-                }
-            }
-        },
-        "label": {
-            "displayName": "Label",
-            "properties": {
+                },
                 "labelFontSize": {
+                    "displayName": "Label Font Size",
+                    "description": "The Size of the Label Font",
                     "type": {
-                        "formatting": {
-                            "fontSize": true
-                        }
+                        "numeric": true
                     }
                 }
             }
         }
-
     },
     "dataViewMappings": [
         {

@@ -82,6 +82,7 @@ export class Visual implements IVisual {
             const newState: State = {
                 size,
                 borderWidth: object?.circleThickness.value || undefined,
+                labelFontSize: object?.labelFontSize.value || undefined,
                 background: object?.circleColor.value.value || undefined,
                 textLabel: dataView.metadata.columns[0].displayName,
                 textValue: dataView.single.value.toString()

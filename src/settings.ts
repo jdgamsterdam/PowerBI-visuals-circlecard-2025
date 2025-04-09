@@ -24,6 +24,8 @@
 *  THE SOFTWARE.
 */
 
+// See https://learn.microsoft.com/en-us/power-bi/developer/visuals/formatting-model-fontcontrol  to try to add more font items.
+
 "use strict";
 
 import { formattingSettings } from "powerbi-visuals-utils-formattingmodel";
@@ -53,8 +55,7 @@ export class CircleSettings extends FormattingSettingsCard {
     slices: FormattingSettingsSlice[] = [this.circleColor, this.circleThickness, this.labelFontSize];
 }
 
-export class Settings extends Model {
+export class Settings extends formattingSettings.Model {
     public circle: CircleSettings = new CircleSettings();
-//    public label: LabelSettings = new LabelSettings();
-    cards: FormattingSettingsCard[] = [this.circle];
+    public cards: formattingSettings.SimpleCard[] = [this.circle]
 }

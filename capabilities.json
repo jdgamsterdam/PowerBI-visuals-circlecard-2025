@@ -36,6 +36,18 @@
                     }
                 }
             }
+        },
+        "value": {
+            "displayName": "Value",
+            "properties": {
+                "valueFontSize": {
+                    "displayName": "Value Font Size",
+                    "description": "The Size of the Value Font",
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
         }
     },
     "dataViewMappings": [

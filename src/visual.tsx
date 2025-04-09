@@ -76,14 +76,18 @@ export class Visual implements IVisual {
                 Settings,
                 options.dataViews[0]
             );
-            const object = this.settings.circle;
-    
+
+            //Create Objects for all defined seperate Items
+            const circleobject = this.settings.circle;
+            const valueobject = this.settings.value;
+
             // Build the new state object aligned with the State interface defined in component.tsx.
             const newState: State = {
                 size,
-                borderWidth: object?.circleThickness.value || undefined,
-                labelFontSize: object?.labelFontSize.value || undefined,
-                background: object?.circleColor.value.value || undefined,
+                borderWidth: circleobject?.circleThickness.value || undefined,
+                labelFontSize: circleobject?.labelFontSize.value || undefined,
+                valueFontSize: valueobject?.valueFontSize.value || undefined,
+                background: circleobject?.circleColor.value.value || undefined,
                 textLabel: dataView.metadata.columns[0].displayName,
                 textValue: dataView.single.value.toString()
             };
@@ -92,6 +96,7 @@ export class Visual implements IVisual {
             if (this.reactRef.current) {
                 this.reactRef.current.setState(newState);
             }
+            
         } else {
             this.clear();
         }

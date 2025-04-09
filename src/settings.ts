@@ -29,7 +29,6 @@
 "use strict";
 
 import { formattingSettings } from "powerbi-visuals-utils-formattingmodel";
-import Model = formattingSettings.Model;
 import FormattingSettingsCard = formattingSettings.SimpleCard;
 import FormattingSettingsSlice = formattingSettings.Slice;
 
@@ -55,7 +54,20 @@ export class CircleSettings extends FormattingSettingsCard {
     slices: FormattingSettingsSlice[] = [this.circleColor, this.circleThickness, this.labelFontSize];
 }
 
+export class ValueSettings extends FormattingSettingsCard {
+    public valueFontSize = new formattingSettings.NumUpDown({
+        name: "valueFontSize",
+        displayName: "Value Font Size",
+        value: 15,
+    });
+
+    name: string = "value";
+    displayName: string = "Value";
+    slices: FormattingSettingsSlice[] = [this.valueFontSize];
+}
+
 export class Settings extends formattingSettings.Model {
     public circle: CircleSettings = new CircleSettings();
-    public cards: formattingSettings.SimpleCard[] = [this.circle]
+    public value: ValueSettings = new ValueSettings();
+    public cards: formattingSettings.SimpleCard[] = [this.circle, this.value]    
 }

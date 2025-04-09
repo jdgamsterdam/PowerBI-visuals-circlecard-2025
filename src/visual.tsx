@@ -79,13 +79,14 @@ export class Visual implements IVisual {
 
             //Create Objects for all defined seperate Items
             const circleobject = this.settings.circle;
+            const labelobject = this.settings.label;
             const valueobject = this.settings.value;
 
             // Build the new state object aligned with the State interface defined in component.tsx.
             const newState: State = {
                 size,
                 borderWidth: circleobject?.circleThickness.value || undefined,
-                labelFontSize: circleobject?.labelFontSize.value || undefined,
+                labelFontSize: labelobject?.labelFontSize.value || undefined,
                 valueFontSize: valueobject?.valueFontSize.value || undefined,
                 background: circleobject?.circleColor.value.value || undefined,
                 textLabel: dataView.metadata.columns[0].displayName,

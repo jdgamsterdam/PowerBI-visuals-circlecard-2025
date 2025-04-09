@@ -37,6 +37,18 @@
                 }
             }
         },
+        "label": {
+            "displayName": "Label",
+            "properties": {
+                "labelFontSize": {
+                    "displayName": "Label Font Size",
+                    "description": "The Size of the Label Font",
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
+        },
         "value": {
             "displayName": "Value",
             "properties": {

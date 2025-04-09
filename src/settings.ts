@@ -43,16 +43,24 @@ export class CircleSettings extends FormattingSettingsCard {
         displayName: "Thickness",
         value: 10,
     });
-    public labelFontSize = new formattingSettings.NumUpDown({
-        name: "labelFontSize",
-        displayName: "Label Font Size",
-        value: 10,
-    });
 
     name: string = "circle";
     displayName: string = "Circle";
-    slices: FormattingSettingsSlice[] = [this.circleColor, this.circleThickness, this.labelFontSize];
+    slices: FormattingSettingsSlice[] = [this.circleColor, this.circleThickness];
 }
+
+export class LabelSettings extends FormattingSettingsCard {
+    public labelFontSize = new formattingSettings.NumUpDown({
+        name: "labelFontSize",
+        displayName: "Label Font Size",
+        value: 15,
+    });
+
+    name: string = "label";
+    displayName: string = "Label";
+    slices: FormattingSettingsSlice[] = [this.labelFontSize];
+}
+
 
 export class ValueSettings extends FormattingSettingsCard {
     public valueFontSize = new formattingSettings.NumUpDown({
@@ -68,6 +76,7 @@ export class ValueSettings extends FormattingSettingsCard {
 
 export class Settings extends formattingSettings.Model {
     public circle: CircleSettings = new CircleSettings();
+    public label: LabelSettings = new LabelSettings();
     public value: ValueSettings = new ValueSettings();
-    public cards: formattingSettings.SimpleCard[] = [this.circle, this.value]    
+    public cards: formattingSettings.SimpleCard[] = [this.circle, this.label, this.value]    
 }

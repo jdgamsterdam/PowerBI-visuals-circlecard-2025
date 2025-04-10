@@ -27,21 +27,14 @@
                     "type": {
                         "numeric": true
                     }
-                },
-                "labelFontSize": {
-                    "displayName": "Label Font Size",
-                    "description": "The Size of the Label Font",
-                    "type": {
-                        "numeric": true
-                    }
                 }
             }
         },
         "label": {
+            "description": "NOTE: Since objects are handled in the Settings.ts file now, the displayName of the property is not really needed in label or value. However the description does show on the tooltip",
             "displayName": "Label",
             "properties": {
                 "labelFontSize": {
-                    "displayName": "Label Font Size",
                     "description": "The Size of the Label Font",
                     "type": {
                         "numeric": true
@@ -53,7 +46,6 @@
             "displayName": "Value",
             "properties": {
                 "valueFontSize": {
-                    "displayName": "Value Font Size",
                     "description": "The Size of the Value Font",
                     "type": {
                         "numeric": true
